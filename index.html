@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DigiKarya — marketplace produk digital praktis untuk kreator, pelaku UMKM, dan pembelajar mandiri.">
+  <meta name="theme-color" content="#0b0b12">
+  <title>DigiKarya — Produk Digital untuk Berkarya</title>
+  <!-- Midtrans Snap Sandbox: ganti Client Key dengan milik akun Sandbox Anda. Server Key hanya disimpan di backend/.env. -->
+  <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="GANTI_DENGAN_CLIENT_KEY_SANDBOX" defer></script>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0b12;--surface:#12121d;--surface2:#191827;--line:rgba(255,255,255,.09);--text:#f7f5ff;--muted:#aaa7bd;--purple:#8b5cf6;--purple2:#a78bfa;--pink:#d946ef;--success:#52d6a1;--radius:22px;--shadow:0 24px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(124,58,237,.14),transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.container{width:min(1160px,calc(100% - 40px));margin-inline:auto}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(167,139,250,.26);border-radius:999px;padding:7px 12px;color:#d4c5ff;background:rgba(139,92,246,.09);font-size:.8rem;font-weight:700;letter-spacing:.04em}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--purple2);box-shadow:0 0 15px var(--purple)}
+    .navbar{position:sticky;top:0;z-index:20;background:rgba(11,11,18,.83);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:inline-flex;align-items:center;gap:11px;font-weight:850;font-size:1.13rem;letter-spacing:-.035em;white-space:nowrap}.brand-mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(145deg,#a78bfa,#7c3aed 65%,#5b21b6);box-shadow:0 8px 24px rgba(124,58,237,.3);display:grid;place-items:center;font-size:18px;font-weight:900;color:white}.nav-links{display:flex;align-items:center;gap:30px;color:#c8c4d8;font-size:.92rem}.nav-links a:hover,.nav-links a:focus-visible{color:white}.nav-actions{display:flex;align-items:center;gap:12px}.menu-toggle{display:none;border:1px solid var(--line);background:var(--surface);color:white;border-radius:12px;width:42px;height:42px;cursor:pointer;font-size:1.2rem}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:13px;border:1px solid transparent;font-weight:750;font-size:.92rem;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{color:white;background:linear-gradient(135deg,#9b72ff,#7c3aed);box-shadow:0 10px 26px rgba(124,58,237,.22)}.btn-primary:hover{background:linear-gradient(135deg,#ad91ff,#8b5cf6)}.btn-secondary{color:#f2edff;background:rgba(255,255,255,.045);border-color:var(--line)}.btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .hero{padding:88px 0 90px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:50px}.hero h1{font-size:clamp(2.75rem,5.3vw,4.8rem);line-height:1.06;letter-spacing:-.065em;margin:23px 0 22px;max-width:680px}.gradient-text{background:linear-gradient(95deg,#c4b5fd,#a78bfa 48%,#e879f9);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{font-size:1.08rem;color:var(--muted);max-width:570px;margin:0 0 28px}.hero-cta{display:flex;gap:12px;flex-wrap:wrap}.hero-note{display:flex;align-items:center;gap:11px;color:#bbb7cc;font-size:.82rem;margin-top:23px}.tiny-check{color:var(--success);font-weight:900}.hero-visual{position:relative;min-width:0}.visual-glow{position:absolute;inset:12% 8%;background:linear-gradient(120deg,rgba(124,58,237,.37),rgba(217,70,239,.19));filter:blur(60px);border-radius:50%}.visual-frame{position:relative;padding:16px;border-radius:28px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.02));box-shadow:var(--shadow);transform:rotate(1.5deg)}.visual-frame img{display:block;width:100%;aspect-ratio:1.13/1;object-fit:cover;border-radius:18px;background:#242035}.float-card{position:absolute;padding:15px 17px;border-radius:17px;border:1px solid rgba(255,255,255,.12);background:rgba(22,20,36,.94);box-shadow:0 18px 40px rgba(0,0,0,.3);backdrop-filter:blur(12px)}.float-card strong{display:block;font-size:1rem}.float-card small{display:block;color:var(--muted);font-size:.76rem}.float-top{top:11%;right:-22px}.float-bottom{bottom:9%;left:-29px}.mini-icon{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:10px;margin-right:7px;background:rgba(139,92,246,.2);color:#c4b5fd;font-weight:900}
+    section{padding:76px 0}.section-head{text-align:center;max-width:660px;margin:0 auto 38px}.section-kicker{color:#ba9cff;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:850}.section-head h2{font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.15;letter-spacing:-.045em;margin:10px 0 13px}.section-head p{color:var(--muted);margin:0}.features{border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);background:linear-gradient(180deg,rgba(255,255,255,.012),rgba(255,255,255,.025))}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature-card,.product-card{border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border-radius:var(--radius);box-shadow:0 12px 32px rgba(0,0,0,.12)}.feature-card{padding:24px 21px}.feature-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:rgba(139,92,246,.14);color:#c4b5fd;font-size:1.15rem;font-weight:850;margin-bottom:18px}.feature-card h3{font-size:1rem;margin:0 0 8px}.feature-card p{font-size:.87rem;color:var(--muted);margin:0}
+    .product-section{background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,.07),transparent 45%)}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product-card{overflow:hidden;transition:transform .24s ease,border-color .24s ease}.product-card:hover{transform:translateY(-5px);border-color:rgba(167,139,250,.4)}.product-image{position:relative;padding:12px 12px 0}.product-image img{display:block;width:100%;height:205px;object-fit:cover;border-radius:15px;background:#211d30}.product-type{position:absolute;left:24px;top:24px;padding:5px 9px;border-radius:8px;background:rgba(12,10,20,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);font-size:.7rem;color:#e6dbff;font-weight:750}.product-body{padding:21px}.product-body h3{font-size:1.15rem;letter-spacing:-.025em;margin:0 0 7px}.product-body p{color:var(--muted);font-size:.9rem;margin:0 0 18px;min-height:52px}.product-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}.price{font-weight:850;font-size:1.12rem;letter-spacing:-.03em}.price small{display:block;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0}.btn-buy{padding:10px 14px}.products-bottom{text-align:center;margin-top:27px;color:var(--muted);font-size:.83rem}
+    .cta-band{padding:0 0 82px}.cta-inner{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:40px 45px;border:1px solid rgba(167,139,250,.22);border-radius:28px;background:radial-gradient(ellipse at 90% 5%,rgba(217,70,239,.19),transparent 35%),linear-gradient(115deg,rgba(124,58,237,.22),rgba(24,20,39,.95));box-shadow:var(--shadow)}.cta-inner h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.04em;line-height:1.2;margin:0 0 9px}.cta-inner p{color:#c2bdd1;margin:0;max-width:560px}.faq-grid{max-width:850px;margin-inline:auto;display:grid;gap:12px}.faq-grid details{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px;padding:18px 21px}.faq-grid summary{cursor:pointer;font-weight:750;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px}.faq-grid summary::-webkit-details-marker{display:none}.faq-grid summary:after{content:"+";font-size:1.2rem;color:#c4b5fd}.faq-grid details[open] summary:after{content:"−"}.faq-grid details p{margin:13px 0 0;color:var(--muted);font-size:.92rem}
+    footer{padding:31px 0;border-top:1px solid var(--line);background:rgba(0,0,0,.12)}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:.82rem}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:white}.footer-legal{max-width:520px;text-align:right}
+    .modal-backdrop{position:fixed;inset:0;z-index:50;padding:24px;display:none;align-items:center;justify-content:center;background:rgba(3,3,8,.76);backdrop-filter:blur(10px)}.modal-backdrop.open{display:flex}.checkout-modal{position:relative;width:min(500px,100%);max-height:calc(100vh - 48px);overflow:auto;padding:28px;border-radius:24px;border:1px solid rgba(255,255,255,.13);background:#151421;box-shadow:0 30px 100px rgba(0,0,0,.6);animation:modal-in .22s ease-out}.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:white;cursor:pointer;font-size:1.2rem}.checkout-modal h2{font-size:1.65rem;letter-spacing:-.04em;margin:5px 40px 5px 0}.modal-lead{margin:0 0 22px;color:var(--muted);font-size:.88rem}.checkout-summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 15px;border:1px solid rgba(167,139,250,.2);background:rgba(139,92,246,.09);border-radius:14px;margin-bottom:21px}.checkout-summary span{color:var(--muted);font-size:.82rem}.checkout-summary strong{font-size:1.05rem}.form-grid{display:grid;gap:15px}.field label{display:block;font-size:.83rem;font-weight:700;margin-bottom:7px;color:#e6e1f3}.field input{width:100%;padding:13px 14px;color:white;border:1px solid rgba(255,255,255,.13);background:#0e0d17;border-radius:12px;outline:none}.field input:focus{border-color:#9b72ff;box-shadow:0 0 0 3px rgba(139,92,246,.15)}.form-help{color:#9e99b1;font-size:.76rem;margin:0}.form-error{display:none;color:#ff9eae;background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.22);padding:10px 12px;border-radius:10px;font-size:.83rem}.form-error.show{display:block}.btn-submit{width:100%;margin-top:2px;min-height:48px}.btn-submit[disabled]{opacity:.65;cursor:wait;transform:none}.spinner{display:none;width:17px;height:17px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}.btn-submit.loading .spinner{display:inline-block}.secure-note{text-align:center;margin:15px 0 0;font-size:.74rem;color:#9d99ae}.secure-note span{color:var(--success)}
+    @keyframes spin{to{transform:rotate(360deg)}}@keyframes modal-in{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media(max-width:980px){.hero-grid{gap:28px}.feature-grid{grid-template-columns:repeat(2,1fr)}.nav-links{gap:18px}.float-top{right:-7px}.float-bottom{left:-9px}}
+    @media(max-width:760px){.container{width:min(100% - 32px,560px)}.nav-inner{height:70px}.menu-toggle{display:inline-grid;place-items:center}.nav-actions>.btn{display:none}.nav-links{position:absolute;left:16px;right:16px;top:calc(100% + 8px);display:none;align-items:stretch;gap:0;padding:8px;border:1px solid var(--line);border-radius:17px;background:#151421;box-shadow:var(--shadow)}.nav-links.open{display:flex;flex-direction:column}.nav-links a{padding:12px 13px;border-radius:10px}.nav-links a:hover{background:rgba(255,255,255,.05)}.hero{padding:57px 0 72px}.hero-grid{grid-template-columns:1fr;gap:42px}.hero h1{font-size:clamp(2.7rem,12vw,4rem)}.hero-copy{font-size:1rem}.hero-visual{width:min(100%,520px);margin-inline:auto}.visual-frame{padding:10px}.visual-frame img{aspect-ratio:1.1/1}.float-card{padding:11px 12px}.float-top{right:-4px}.float-bottom{left:-5px}.feature-grid{gap:12px}.feature-card{padding:19px 16px}.product-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}.product-image img{height:225px}.product-body p{min-height:0}.cta-inner{padding:29px 24px;align-items:flex-start;flex-direction:column}.cta-band{padding-bottom:60px}section{padding:64px 0}.footer-inner{flex-direction:column;align-items:flex-start}.footer-legal{text-align:left}.checkout-modal{padding:23px}}
+    @media(max-width:420px){.feature-grid{grid-template-columns:1fr}.feature-card{display:grid;grid-template-columns:45px 1fr;column-gap:13px;align-items:start}.feature-icon{grid-row:span 2;margin:0}.feature-card h3{margin:1px 0 4px}.hero-cta .btn{flex:1}.product-foot{align-items:flex-start}.price{font-size:1.05rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="DigiKarya, kembali ke beranda"><span class="brand-mark" aria-hidden="true">D</span><span>DigiKarya</span></a>
+      <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
+        <a href="#home">Home</a><a href="#produk">Produk</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="#produk">Jelajahi Produk <span aria-hidden="true">↗</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">☰</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">RUANG KARYA DIGITAL ANDA</span>
+          <h1>Ide hebat, jadi karya <span class="gradient-text">yang berarti.</span></h1>
+          <p class="hero-copy">Temukan ebook, template, dan perangkat digital praktis untuk membantu Anda belajar, membangun usaha, dan berkarya dengan lebih percaya diri.</p>
+          <div class="hero-cta"><a class="btn btn-primary" href="#produk">Lihat Produk <span aria-hidden="true">→</span></a><button class="btn btn-secondary" type="button" data-buy="template-konten">Beli Sekarang <span aria-hidden="true">↗</span></button></div>
+          <div class="hero-note"><span class="tiny-check" aria-hidden="true">✓</span> Akses digital yang praktis, langsung dari perangkat Anda</div>
+        </div>
+        <div class="hero-visual" aria-label="Ilustrasi produk digital">
+          <div class="visual-glow"></div>
+          <div class="visual-frame"><img src="https://placehold.net/default.png" alt="Mockup koleksi produk digital DigiKarya" width="700" height="620"></div>
+          <div class="float-card float-top"><strong><span class="mini-icon" aria-hidden="true">✦</span>Belajar praktis</strong><small>Materi untuk langsung dicoba</small></div>
+          <div class="float-card float-bottom"><strong><span class="mini-icon" aria-hidden="true">↗</span>Mulai berkarya</strong><small>Temukan alat yang tepat</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="keunggulan">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Dibuat untuk memudahkan</div><h2>Mulai lebih mudah, berkembang lebih jauh</h2><p>Pilih sumber daya yang membantu Anda mengubah ide menjadi langkah nyata.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="feature-icon" aria-hidden="true">✦</div><h3>Produk Digital Berkualitas</h3><p>Materi tersusun rapi dan dirancang agar mudah dipahami serta diterapkan.</p></article>
+          <article class="feature-card"><div class="feature-icon" aria-hidden="true">∞</div><h3>Sekali Beli, Akses Selamanya</h3><p>Produk dengan lisensi akses permanen dapat digunakan kembali sesuai ketentuannya.</p></article>
+          <article class="feature-card"><div class="feature-icon" aria-hidden="true">↗</div><h3>Cocok untuk Pemula</h3><p>Mulai dari panduan dasar dan template yang membantu menghemat waktu.</p></article>
+          <article class="feature-card"><div class="feature-icon" aria-hidden="true">◇</div><h3>Hemat & Ramah Lingkungan</h3><p>Materi dikirim secara digital tanpa membutuhkan cetakan fisik.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" id="produk">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Koleksi pilihan</div><h2>Bekal digital untuk ide Anda</h2><p>Pilih produk yang sesuai dengan kebutuhan belajar maupun pengembangan usaha Anda.</p></div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image"><img src="https://placehold.net/default.png" alt="Sampul digital e-book strategi usaha kopi" loading="lazy" width="600" height="400"><span class="product-type">EBOOK • UMKM</span></div>
+            <div class="product-body"><h3>E-book Strategi Bisnis Kopi</h3><p>Panduan digital berisi ide produk, pengenalan pelanggan, dan dasar promosi untuk usaha kopi.</p><div class="product-foot"><div class="price">Rp49.000<small>Akses digital</small></div><button class="btn btn-primary btn-buy" type="button" data-buy="ebook-kopi">Beli <span aria-hidden="true">→</span></button></div></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image"><img src="https://placehold.net/default.png" alt="Sampul template promosi digital untuk usaha keripik" loading="lazy" width="600" height="400"><span class="product-type">TEMPLATE • DESAIN</span></div>
+            <div class="product-body"><h3>Template Promosi Keripik</h3><p>Kumpulan layout promosi yang mudah disesuaikan untuk katalog, unggahan, dan materi jualan.</p><div class="product-foot"><div class="price">Rp35.000<small>File digital</small></div><button class="btn btn-primary btn-buy" type="button" data-buy="template-konten">Beli <span aria-hidden="true">→</span></button></div></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image"><img src="https://placehold.net/default.png" alt="Sampul paket konten digital untuk usaha kuliner" loading="lazy" width="600" height="400"><span class="product-type">PAKET • KONTEN</span></div>
+            <div class="product-body"><h3>Paket Konten UMKM Kuliner</h3><p>Ide caption, kalender konten, dan arahan promosi untuk membantu menjaga komunikasi merek.</p><div class="product-foot"><div class="price">Rp89.000<small>Paket digital</small></div><button class="btn btn-primary btn-buy" type="button" data-buy="paket-kuliner">Beli <span aria-hidden="true">→</span></button></div></div>
+          </article>
+        </div>
+        <p class="products-bottom">Harga ditampilkan dalam Rupiah. Detail format file dan lisensi tersedia pada informasi produk.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Ajakan mulai berkarya">
+      <div class="container"><div class="cta-inner"><div><h2>Siap mengembangkan ide Anda?</h2><p>Temukan sumber daya digital yang sesuai dengan tujuan dan ritme belajar Anda.</p></div><a class="btn btn-primary" href="#produk">Temukan Produk <span aria-hidden="true">→</span></a></div></div>
+    </section>
+
+    <section id="faq">
+      <div class="container"><div class="section-head"><div class="section-kicker">FAQ</div><h2>Yang sering ditanyakan</h2><p>Informasi singkat sebelum Anda memilih produk digital.</p></div>
+        <div class="faq-grid">
+          <details><summary>Bagaimana cara menerima produk setelah membayar?</summary><p>Setelah pembayaran dikonfirmasi, produk digital dapat diakses melalui tautan atau halaman akses yang disediakan pada alur pembelian platform.</p></details>
+          <details><summary>Apakah produk digital dapat digunakan selamanya?</summary><p>Masa akses bergantung pada ketentuan produk. Produk yang mencantumkan akses permanen dapat digunakan kembali sesuai lisensi dan ketentuan yang berlaku untuk produk tersebut.</p></details>
+          <details><summary>Metode pembayaran apa yang tersedia?</summary><p>Metode yang tersedia ditampilkan pada halaman pembayaran. Pilihan dapat mencakup transfer bank, dompet digital, kartu, atau metode lain sesuai dukungan penyedia pembayaran.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak">
+    <div class="container footer-inner">
+      <div><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">D</span><span>DigiKarya</span></a><div style="margin-top:10px">© <span id="year"></span> DigiKarya. Hak cipta dilindungi.</div></div>
+      <div class="footer-legal">Produk digital tunduk pada deskripsi, lisensi, dan kebijakan masing-masing produk. Informasi pada halaman ini tidak menggantikan ketentuan transaksi yang ditampilkan saat checkout.</div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="checkout-backdrop" role="presentation" aria-hidden="true">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-describedby="checkout-description">
+      <button class="modal-close" type="button" id="modal-close" aria-label="Tutup checkout">×</button>
+      <div class="section-kicker">Checkout aman</div><h2 id="checkout-title">Selesaikan pesanan</h2><p class="modal-lead" id="checkout-description">Isi kontak Anda untuk melanjutkan ke halaman pembayaran.</p>
+      <div class="checkout-summary"><div><strong id="checkout-product-name">Produk Digital</strong><br><span>Pesanan Anda</span></div><strong id="checkout-product-price">Rp0</strong></div>
+      <form id="checkout-form" class="form-grid">
+        <input type="hidden" id="order-id" name="order_id" value="">
+        <input type="hidden" id="gross-amount" name="gross_amount" value="">
+        <input type="hidden" id="product-id" name="product_id" value="">
+        <div class="field"><label for="email">Alamat email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com" required maxlength="180"></div>
+        <div class="field"><label for="phone">Nomor HP</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="08xxxxxxxxxx" required minlength="8" maxlength="20" pattern="[0-9+() .-]{8,20}"></div>
+        <p class="form-help">Order ID dibuat otomatis. Harga di server diverifikasi kembali sebelum transaksi dibuat.</p>
+        <div class="form-error" id="form-error" role="alert"></div>
+        <button class="btn btn-primary btn-submit" type="submit" id="pay-button"><span class="spinner" aria-hidden="true"></span><span class="button-label">Bayar Sekarang <span aria-hidden="true">→</span></span></button>
+      </form>
+      <p class="secure-note"><span aria-hidden="true">●</span> Pembayaran diproses melalui halaman pembayaran sandbox.</p>
+    </section>
+  </div>
+
+  <script>
+    // Katalog produk harus cocok dengan katalog pada backend. Backend menetapkan harga tepercaya.
+    const PRODUCTS = {
+      'ebook-kopi': { name: 'E-book Strategi Bisnis Kopi', price: 49000 },
+      'template-konten': { name: 'Template Promosi Keripik', price: 35000 },
+      'paket-kuliner': { name: 'Paket Konten UMKM Kuliner', price: 89000 }
+    };
+    const backdrop = document.getElementById('checkout-backdrop');
+    const checkoutForm = document.getElementById('checkout-form');
+    const payButton = document.getElementById('pay-button');
+    const errorBox = document.getElementById('form-error');
+    const modalClose = document.getElementById('modal-close');
+    let previouslyFocused = null;
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile: terbuka saat tombol hamburger diaktifkan, lalu ditutup setelah memilih menu.
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.textContent = '☰';
+    }));
+
+    function formatRupiah(amount) {
+      return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount);
+    }
+    function openCheckout(productId) {
+      const product = PRODUCTS[productId];
+      if (!product) return;
+      previouslyFocused = document.activeElement;
+      document.getElementById('checkout-product-name').textContent = product.name;
+      document.getElementById('checkout-product-price').textContent = formatRupiah(product.price);
+      document.getElementById('product-id').value = productId;
+      document.getElementById('gross-amount').value = String(product.price); // Hanya untuk tampilan/form; server menghitung ulang harga.
+      document.getElementById('order-id').value = `DE-${Date.now()}`;
+      errorBox.textContent = ''; errorBox.classList.remove('show');
+      backdrop.classList.add('open'); backdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => document.getElementById('email').focus(), 20);
+    }
+    function closeCheckout() {
+      backdrop.classList.remove('open'); backdrop.setAttribute('aria-hidden', 'true'); document.body.style.overflow = '';
+      if (previouslyFocused && typeof previouslyFocused.focus === 'function') previouslyFocused.focus();
+    }
+    document.querySelectorAll('[data-buy]').forEach(button => button.addEventListener('click', () => openCheckout(button.dataset.buy)));
+    modalClose.addEventListener('click', closeCheckout);
+    backdrop.addEventListener('click', event => { if (event.target === backdrop) closeCheckout(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && backdrop.classList.contains('open')) closeCheckout(); });
+
+    function setLoading(isLoading) {
+      payButton.disabled = isLoading;
+      payButton.classList.toggle('loading', isLoading);
+      payButton.querySelector('.button-label').textContent = isLoading ? 'Menyiapkan pembayaran…' : 'Bayar Sekarang →';
+      checkoutForm.querySelectorAll('input').forEach(input => { if (input.type !== 'hidden') input.readOnly = isLoading; });
+    }
+    function showError(message) { errorBox.textContent = message; errorBox.classList.add('show'); }
+
+    checkoutForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      errorBox.textContent = ''; errorBox.classList.remove('show');
+      if (!checkoutForm.reportValidity()) return;
+      const clientKey = document.querySelector('script[src*="snap.js"]')?.dataset.clientKey || '';
+      if (!clientKey || clientKey === 'GANTI_DENGAN_CLIENT_KEY_SANDBOX') {
+        showError('Konfigurasi belum lengkap. Ganti Client Key Sandbox pada tag Snap.js di index.html dan siapkan backend sesuai README.');
+        return;
+      }
+      if (!window.snap || typeof window.snap.pay !== 'function') {
+        showError('Snap.js belum dapat dimuat. Periksa koneksi internet dan konfigurasi Client Key Sandbox.');
+        return;
+      }
+      const formData = new FormData(checkoutForm);
+      const payload = {
+        order_id: String(formData.get('order_id') || ''),
+        product_id: String(formData.get('product_id') || ''),
+        email: String(formData.get('email') || '').trim(),
+        phone: String(formData.get('phone') || '').trim()
+      };
+      setLoading(true);
+      try {
+        // Token Snap dibuat oleh backend, bukan browser. Jangan kirim Server Key melalui frontend atau CORS proxy.
+        const response = await fetch('/api/create-transaction', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.token) throw new Error(data.message || 'Token pembayaran tidak berhasil dibuat. Pastikan backend berjalan dan kredensial Sandbox benar.');
+        closeCheckout();
+        window.snap.pay(data.token, {
+          onSuccess: result => { console.info('Pembayaran berhasil; verifikasi status akhir tetap harus dilakukan di backend.', result); alert('Pembayaran berhasil diproses. Status akhir akan diverifikasi oleh sistem.'); },
+          onPending: result => { console.info('Pembayaran menunggu konfirmasi.', result); alert('Pembayaran masih menunggu konfirmasi. Simpan Order ID Anda untuk referensi.'); },
+          onError: result => { console.error('Pembayaran gagal.', result); alert('Pembayaran gagal. Silakan coba kembali atau gunakan metode pembayaran lain.'); },
+          onClose: () => console.info('Jendela pembayaran ditutup oleh pengguna.')
+        });
+      } catch (error) {
+        showError(error.message || 'Terjadi kendala saat menyiapkan pembayaran. Silakan coba kembali.');
+      } finally { setLoading(false); }
+    });
+  </script>
+</body>
+</html>
